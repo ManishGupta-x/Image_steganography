@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="Stegno.css">
+  <script src="Stegno.js"></script>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="Images/logo.png" alt="Logo" class="logo">
+  </div>
+  
+  <div class="tab-container">
+    <div class="tab active" id="encode-tab" onclick="openTab('encode')">Encode</div>
+    <div class="tab" id="decode-tab" onclick="openTab('decode')">Decode</div>
+  </div>
+
+  <div class="content" id="encode" style="display: block;">
+    <!-- Content for the Encode tab goes here -->
+    <div class="dotted-box">
+        <div class="dotted-box-inner">
+            <!-- Content for the dotted box goes here -->
+            <img src="Images/upload2-removebg-preview.png" alt="Upload Image" class="upload-image">
+            <p class="drag-text">Drag and Drop</p>
+            <p class="or-text">Your File</p>
+            <form>
+                <label for="file-upload" class="browse-button"></label>
+                <input type="file" id="file-upload" name="file-upload">
+              </form>
+              < <textarea class="message-box" id="message-box" placeholder="Enter your message"></textarea>
+              <input type="submit" value="Encode Message" class="submit-button" onclick="createTextFile(event)">
+          </div>
+      </div>
+      
+  </div>
+  <div class="content" id="decode" style="display: none;">
+    <!-- Content for the Decode tab goes here -->
+  </div>
+
+  
+</body>
+</html>
